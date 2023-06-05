@@ -24,8 +24,8 @@ public class MainController {
     @RequestMapping("/")
     public ResponseEntity<String> uploadCSVFilesIntoDB() {
         try {
-            csvHelper.uploadCsvDataIntoDb("D:\\Intellij_Workspace\\Task\\src\\main\\resources\\CSVFiles\\ratings.csv");
-            csvHelper.uploadCsvDataIntoDb("D:\\Intellij_Workspace\\Task\\src\\main\\resources\\CSVFiles\\movies.csv");
+            csvHelper.uploadCsvDataIntoDb("src\\main\\resources\\CSVFiles\\ratings.csv");
+            csvHelper.uploadCsvDataIntoDb("src\\main\\resources\\CSVFiles\\movies.csv");
             return ResponseEntity.ok("Uploaded CSV files data into Db...");
         } catch (Exception e) {
             e.printStackTrace();
